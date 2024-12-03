@@ -1,0 +1,19 @@
+{
+    "base_link":[],
+    "Finger1_Link2_box":[],
+    "Finger1_Link1_box":[],
+    "Finger1_Link1_capsule":[],
+    "test_link":[],
+    "test_link2":[],
+    "Thumb_Side_Gear_Link_child":[],
+    "Thumb_Link1_child":[[0, 0, 0]],
+    "Thumb_Link2_child":[[0, 0, 0], [0.045, -0.015, 0]],
+    "Finger1_Link1_child":[[0, 0, 0]], 
+    "Finger1_Link2_child":[[0, 0, 0], [0.045, -0.015, 0]], 
+    "Finger2_Link1_child":[[0, 0, 0]], 
+    "Finger2_Link2_child":[[0, 0, 0], [0.045, -0.015, 0]], 
+    "Finger3_Link1_child":[[0, 0, 0]], 
+    "Finger3_Link2_child":[[0, 0, 0], [0.045, -0.015, 0]], 
+    "Finger4_Link1_child":[[0, 0, 0]], 
+    "Finger4_Link2_child":[[0, 0, 0], [0.045, -0.015, 0]]
+}

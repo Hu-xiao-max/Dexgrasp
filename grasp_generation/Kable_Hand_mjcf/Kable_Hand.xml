@@ -1,0 +1,167 @@
+<mujoco model="Kable_Hand">
+    <compiler angle="radian" />
+    <size njmax="500" nconmax="100" />
+    <asset>
+        <mesh name="base_link" file="./Kable_Hand_mjcf/meshes/base_link.STL" />
+        <mesh name="Gear_Link1" file="./Kable_Hand_mjcf/meshes/Gear_Link1.STL" />
+        <mesh name="Gear_Link2" file="./Kable_Hand_mjcf/meshes/Gear_Link2.STL" />
+        <mesh name="Gear_Link3" file="./Kable_Hand_mjcf/meshes/Gear_Link3.STL" />
+        <mesh name="Gear_Link4" file="./Kable_Hand_mjcf/meshes/Gear_Link4.STL" />
+        <mesh name="Thumb_Side_Gear_Link" file="./Kable_Hand_mjcf/meshes/Thumb_Side_Gear_Link.STL" />
+        <mesh name="Thumb_Link1" file="./Kable_Hand_mjcf/meshes/Thumb_Link1.STL" />
+        <mesh name="Thumb_Link2" file="./Kable_Hand_mjcf/meshes/Thumb_Link2.STL" />
+        <mesh name="Thumb_Gear_Link" file="./Kable_Hand_mjcf/meshes/Thumb_Gear_Link.STL" />
+        <mesh name="Finger1_Link1" file="./Kable_Hand_mjcf/meshes/Finger1_Link1.STL" />
+        <mesh name="Finger1_Link2" file="./Kable_Hand_mjcf/meshes/Finger1_Link2.STL" />
+        <mesh name="Finger2_Link1" file="./Kable_Hand_mjcf/meshes/Finger2_Link1.STL" />
+        <mesh name="Finger2_Link2" file="./Kable_Hand_mjcf/meshes/Finger2_Link2.STL" />
+        <mesh name="Finger3_Link1" file="./Kable_Hand_mjcf/meshes/Finger3_Link1.STL" />
+        <mesh name="Finger3_Link2" file="./Kable_Hand_mjcf/meshes/Finger3_Link2.STL" />
+        <mesh name="Finger4_Link1" file="./Kable_Hand_mjcf/meshes/Finger4_Link1.STL" />
+        <mesh name="Finger4_Link2" file="./Kable_Hand_mjcf/meshes/Finger4_Link2.STL" />
+    </asset>
+    <!-- <asset>
+        <mesh name="base_link" file="meshes/base_link.STL" />
+        <mesh name="Gear_Link1" file="meshes/Gear_Link1.STL" />
+        <mesh name="Gear_Link2" file="meshes/Gear_Link2.STL" />
+        <mesh name="Gear_Link3" file="meshes/Gear_Link3.STL" />
+        <mesh name="Gear_Link4" file="meshes/Gear_Link4.STL" />
+        <mesh name="Thumb_Side_Gear_Link" file="meshes/Thumb_Side_Gear_Link.STL" />
+        <mesh name="Thumb_Link1" file="meshes/Thumb_Link1.STL" />
+        <mesh name="Thumb_Link2" file="meshes/Thumb_Link2.STL" />
+        <mesh name="Thumb_Gear_Link" file="meshes/Thumb_Gear_Link.STL" />
+        <mesh name="Finger1_Link1" file="meshes/Finger1_Link1.STL" />
+        <mesh name="Finger1_Link2" file="meshes/Finger1_Link2.STL" />
+        <mesh name="Finger2_Link1" file="meshes/Finger2_Link1.STL" />
+        <mesh name="Finger2_Link2" file="meshes/Finger2_Link2.STL" />
+        <mesh name="Finger3_Link1" file="meshes/Finger3_Link1.STL" />
+        <mesh name="Finger3_Link2" file="meshes/Finger3_Link2.STL" />
+        <mesh name="Finger4_Link1" file="meshes/Finger4_Link1.STL" />
+        <mesh name="Finger4_Link2" file="meshes/Finger4_Link2.STL" />
+    </asset> -->
+    <worldbody>
+        <body name="base_link">
+            <!-- <inertial mass="0.3" diaginertia="0.001 0.001 0.001" /> -->
+            <!-- <inertial pos="0 0 0" quat="0.715833 0.0439898 0.0749825 0.692839" mass="0.3" diaginertia="0.001 0.001 0.001" /> -->
+            <!-- <geom pos="-0.02852592 -0.01104275  0.01763111" quat="-0.46102097  0.62253921  0.39097671  0.49703301" size="0.080424 0.050936 0.027650"  type="box" rgba="0.4 0.5 0.6 0.1" /> -->
+            <geom pos="-0.02852592 -0.01104275  0.01763111" quat="-0.46102097  0.62253921  0.39097671  0.49703301" size="0.060424 0.050936 0.02"  type="box" rgba="0.4 0.5 0.6 0.1" />
+
+            <!-- <geom size="0.09980616 0.06199334 0.16142491" pos="0 0 0" type="box" rgba="0.4 0.5 0.6 0.1" /> -->
+            <!-- <geom pos="-0.029559 -0.012076 0.016598" quat=" -0.461021 0.622539 0.390977 0.497033" size="0.080424 0.050936 0.027650"  type="box" rgba="0.4 0.5 0.6 0.1" /> -->
+            <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="base_link" /> -->
+            <!-- <body name="Gear_Link1" pos="-0.065517 0.002731 -0.026815" quat="0.622757 -0.0974468 0.733189 -0.255171">
+                <inertial pos="3.21236e-07 -3.32126e-08 -0.000970165" quat="0.926806 -6.12966e-05 0.000151275 0.375541" mass="0.0049203" diaginertia="7.26018e-08 7.04349e-08 6.7925e-08" />
+                <joint name="Gear_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="0 3.8397" />
+                <geom type="mesh" rgba="0.317647 0.247059 0.207843 1" mesh="Gear_Link1" />
+            </body>
+            <body name="Gear_Link2" pos="-0.045112 -0.0026274 -0.035619" quat="0.633433 -0.095988 0.722615 -0.259568">
+                <inertial pos="3.215e-07 -3.0764e-08 -0.00097016" quat="0.92681 -6.06731e-05 0.000149742 0.37553" mass="0.0049203" diaginertia="7.2602e-08 7.0435e-08 6.7925e-08" />
+                <joint name="Gear_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="0 3.8397" />
+                <geom type="mesh" rgba="0.31765 0.24706 0.20784 1" mesh="Gear_Link2" />
+            </body>
+            <body name="Gear_Link3" pos="-0.024133 -0.0081371 -0.040426" quat="0.643935 -0.094609 0.711876 -0.263872">
+                <inertial pos="2.0285e-07 1.9533e-07 -0.00097016" quat="0.92681 -5.87737e-05 0.000145054 0.37553" mass="0.0049203" diaginertia="7.2602e-08 7.0435e-08 6.7925e-08" />
+                <joint name="Gear_Joint3" pos="0 0 0" axis="0 0 -1" limited="true" range="0 3.8397" />
+                <geom type="mesh" rgba="0.31765 0.24706 0.20784 1" mesh="Gear_Link3" />
+            </body>
+            <body name="Gear_Link4" pos="-0.0029031 -0.013712 -0.03599" quat="0.654305 -0.093136 0.700947 -0.268113">
+                <inertial pos="3.3395e-07 -1.7285e-08 -0.00097016" quat="0.92681 -5.7091e-05 0.000140901 0.37553" mass="0.0049203" diaginertia="7.2602e-08 7.0435e-08 6.7925e-08" />
+                <joint name="Gear_Joint4" pos="0 0 0" axis="0 0 -1" limited="true" range="0 3.8397" />
+                <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Gear_Link4" />
+            </body> -->
+            <!-- <body name="Finger1_Link1_box">
+                <geom name="test_f1_l1_box" pos="-0.07061348010514505 -0.0026578442710435686 -0.06468241049072138" quat="0.5726576536474609 -0.3747780663911046 0.553784875257566 0.47426461454244223" size="0.01142747 0.0290768" type="capsule" rgba="0.4 0.5 0.6 0.1" />
+            </body> -->
+            <!-- <body name="Finger1_Link2_box">
+                <geom pos="-0.07244986086423755 0.00522490622247691 -0.10440204105047683" quat="0.3323655745078021 0.617891165839094 0.5110191502036504 -0.49659144191703763" size="0.02537376 0.00986723 0.00961648" type="box" rgba="0.4 0.5 0.6 0.1" />
+                <geom pos="-0.07244986086423755 0.00522490622247691 -0.10440204105047683" quat="0.3323655745078021 0.617891165839094 0.5110191502036504 -0.49659144191703763" size="0.00986723 0.02537376" type="capsule" rgba="0.4 0.5 0.6 0.1" />
+            </body> -->
+            <body name="Thumb_Side_Gear_Link" pos="0 0 0">
+                <inertial pos="0.010087 0.0025106 0.0052169" quat="0.55709 0.428215 0.406231 0.584174" mass="0.025787" diaginertia="3.61958e-06 3.17618e-06 2.17894e-06" />
+                <joint name="Thumb_Side_Gear_Joint" pos="0 0 0" axis="0 0 1" limited="true" range="0 1.57" />
+                <!-- <joint name="Thumb_Side_Gear_Joint" pos="0 0 0" axis="0 0 1" limited="true" range="-1.57 0" /> -->
+                <!-- <geom pos="0.00885355 0.00157962 0.00081656" quat="0.815854   -0.57012147  0.07521388  0.06071765" size="0.01867042 0.01314742" type="capsule"/>  -->
+                <geom pos="0.00885355 0.00157962 0.00081656" quat="0.815854   -0.57012147  0.07521388  0.06071765" size="0.01142141 0.01314742" type="capsule"/>  
+                <!-- <geom pos="0.03085355 0.00157962 0.00081656" quat="0.815854   -0.57012147  0.07521388  0.06071765" size="0.01142141 0.01314742" type="capsule"/>   -->
+                <!-- <geom type="mesh" rgba="0.31765 0.24706 0.20784 1" mesh="Thumb_Side_Gear_Link" /> -->
+                <body name="Thumb_Link1" pos="0.029921 0 0" quat="0.70262 -0.699778 0.101552 -0.0795193">
+                    <inertial pos="0.025498 -0.00019689 -4.4958e-05" quat="-4.802e-05 0.709322 0.0148423 0.704729" mass="0.025004" diaginertia="4.9813e-06 4.70273e-06 9.44934e-07" />
+                    <!-- <joint name="Thumb_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                    <joint name="Thumb_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                    <geom pos="2.41296654e-02 7.32636757e-04 5.90247335e-06" quat="-0.7120584   0.70109845  0.02625209 -0.02728793" size="0.01142141 0.01766193" type="capsule"/>   
+                    <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Thumb_Link1" /> -->
+                    <body name="Thumb_Link2" pos="0.044515 0.0015319 0" quat="0.962926 0 0 0.269766">
+                        <inertial pos="0.020026 -0.0068153 -6.9655e-05" quat="0.129249 0.701715 -0.0866042 0.695262" mass="0.015561" diaginertia="2.11132e-06 2.07982e-06 4.25193e-07" />
+                        <!-- <joint name="Thumb_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                        <joint name="Thumb_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                        <geom pos="1.95002388e-02 -5.88227962e-03 -4.72703774e-06" quat="0.69815694  0.70161546 -0.10052421 -0.1010322" size="0.00986723 0.01550652" type="capsule"/>   
+                        <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Thumb_Link2" /> -->
+                    </body>
+                </body>
+            </body>
+            <!-- <body name="Thumb_Gear_Link" pos="0 0 0">
+                <inertial pos="4.1326e-05 0.00015812 -0.00093746" quat="0.0907202 0.701271 -0.0907222 0.701255" mass="0.007631" diaginertia="2.19e-07 1.44054e-07 1.42756e-07" />
+                <joint name="Thumb_Gear_Joint" pos="0 0 0" axis="0 0 1" limited="true" range="0 2.8293" />
+                <geom type="mesh" rgba="0.31765 0.24706 0.20784 1" mesh="Thumb_Gear_Link" />
+            </body> -->
+            <body name="Finger1_Link1" pos="-0.068818 -0.0046734 -0.040694" quat="0.669947 0.11879 0.730029 -0.0641679">
+                <inertial pos="0.025476 -0.0010737 -4.4951e-05" quat="0.0120778 0.709473 0.00264935 0.704625" mass="0.025004" diaginertia="4.9813e-06 4.70275e-06 9.44932e-07" />
+                <!-- <joint name="Finger1_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                <joint name="Finger1_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                <geom pos="2.41396102e-02 -9.43994402e-05  1.89345852e-05" quat="0.7129768780248351 -0.7008696112493811 -0.014761007020653263 0.01509543311195033" size="0.01142747 0.0176493319518365" type="capsule"/>   
+                <!-- <geom name="f1_l1_box" pos="0.01469091  0.0120456  -0.02089139" quat="0.7138320682961401, 0.6998231849521488, 0.003597496506092996, 0.026045078121867182" size="0.01142746671382966 0.0176493319518365" type="capsule"/>       -->
+                <!-- <geom name="f1_l1_box" pos="-0.0017954801051450475 0.0020155557289564317 -0.023988410490721375" quat="0.7129769028873968 -0.7008695906822586 -0.014760452837279146 0.01509575562922203" size="0.01142746671382966 0.0176493319518365" type="capsule"/> -->
+                <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Finger1_Link1" /> -->
+                <body name="Finger1_Link2" pos="0.044541 0 0" quat="0.967422 0 0 0.253169">
+                    <inertial pos="0.020025 -0.0068148 -6.9833e-05" quat="0.129172 0.701715 -0.0866476 0.695271" mass="0.01556" diaginertia="2.11112e-06 2.07966e-06 4.25151e-07" />
+                    <!-- <joint name="Finger1_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                    <joint name="Finger1_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                    <geom pos="1.95002388e-02 -5.88227962e-03 -4.72703774e-06" quat="0.6981569445444467 0.7016154636770108 -0.10052420976583545 -0.10103219865275567" size="0.00986723279161551 0.01550652485013113" type="capsule"/>   
+                    <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Finger1_Link2" /> -->
+                </body>
+            </body>
+            <body name="Finger2_Link1" pos="-0.047991 -0.010143 -0.049531" quat="0.68142 0.117101 0.71951 -0.0652694">
+                <inertial pos="0.025476 -0.0010737 -4.4938e-05" quat="0.0120782 0.709472 0.00264963 0.704625" mass="0.025004" diaginertia="4.9813e-06 4.70275e-06 9.44932e-07" />
+                <!-- <joint name="Finger2_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                <joint name="Finger2_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                <geom pos="2.41396102e-02 -9.44070949e-05  1.89045596e-05" quat="0.7129769028873968 -0.7008695906822586 -0.014760452837279125 0.015095755629222107" size="0.01142746671382966 0.0176493319518365" type="capsule"/>   
+                <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Finger2_Link1" /> -->
+                <body name="Finger2_Link2" pos="0.044541 0 0" quat="0.967422 0 0 0.253169">
+                    <inertial pos="0.0200259 -0.00681524 -6.96454e-05" quat="0.12927 0.701717 -0.0865771 0.69526" mass="0.015561" diaginertia="2.11133e-06 2.07983e-06 4.25182e-07" />
+                    <!-- <joint name="Finger2_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                    <joint name="Finger2_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                    <geom pos="1.95002388e-02 -5.88227962e-03 -4.72703774e-06" quat="0.6981569445444467 0.7016154636770109 -0.10052420976583532 -0.10103219865275564" size="0.009867232791615516 0.01550652485013113" type="capsule"/>   
+                    <!-- <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="Finger2_Link2" /> -->
+                </body>
+            </body>
+            <body name="Finger3_Link1" pos="-0.026589 -0.015763 -0.054359" quat="0.692748 0.115318 0.708802 -0.0663487">
+                <inertial pos="0.025476 -0.0010737 -4.4956e-05" quat="0.0120736 0.709472 0.00264194 0.704625" mass="0.025004" diaginertia="4.9813e-06 4.70276e-06 9.44931e-07" />
+                <!-- <joint name="Finger3_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                <joint name="Finger3_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                <geom pos="2.41396102e-02 -9.44070949e-05  1.89045596e-05" quat="0.7129769028873968 -0.7008695906822588 -0.014760452837279038 0.01509575562922194" size="0.01142746671382966 0.0176493319518365" type="capsule"/>   
+                <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Finger3_Link1" /> -->
+                <body name="Finger3_Link2" pos="0.044541 0 0" quat="0.967422 0 0 0.253169">
+                    <inertial pos="0.020026 -0.0068153 -6.9667e-05" quat="0.129247 0.701715 -0.086605 0.695264" mass="0.015561" diaginertia="2.11132e-06 2.07982e-06 4.25184e-07" />
+                    <!-- <joint name="Finger3_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                    <joint name="Finger3_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                    <geom pos="1.95002388e-02 -5.88227962e-03 -4.72703774e-06" quat="0.69815694  0.70161546 -0.10052421 -0.1010322" size="0.00986723 0.01550652" type="capsule"/>   
+                    <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Finger3_Link2" /> -->
+                </body>
+            </body>
+            <body name="Finger4_Link1" pos="-0.004935 -0.02145 -0.04993" quat="0.703885 0.113561 0.697928 -0.0674274">
+                <inertial pos="0.025476 -0.0010737 -4.4975e-05" quat="0.0120723 0.709472 0.00264369 0.704625" mass="0.025004" diaginertia="4.9813e-06 4.70276e-06 9.44932e-07" />
+                <!-- <joint name="Finger4_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                <joint name="Finger4_Joint1" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                <geom pos="2.41396102e-02 -9.44070949e-05  1.89045596e-05" quat="0.7129769  -0.70086959 -0.01476045  0.01509576" size="0.01142747 0.01764933" type="capsule"/>   
+                <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Finger4_Link1" /> -->
+                <body name="Finger4_Link2" pos="0.044541 0 0" quat="0.967422 0 0 0.253169">
+                    <inertial pos="0.020026 -0.0068153 -6.9715e-05" quat="0.129308 0.701723 -0.0865308 0.695253" mass="0.015561" diaginertia="2.11132e-06 2.07991e-06 4.25184e-07" />
+                    <!-- <joint name="Finger4_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="0 1.396" /> -->
+                    <joint name="Finger4_Joint2" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.396 0" />
+                    <geom pos="1.95002388e-02 -5.88227962e-03 -4.72703774e-06" quat="0.69815694  0.70161546 -0.10052421 -0.1010322" size="0.00986723 0.01550652" type="capsule"/>   
+                    <!-- <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Finger4_Link2" /> -->
+                </body>
+            </body>
+        </body>
+    </worldbody>
+</mujoco>
