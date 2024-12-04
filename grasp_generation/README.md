@@ -35,7 +35,7 @@ conda install rtree  # soft dependency for trimesh
 cd DexGraspNet/thirdparty
 git clone https://github.com/wrc042/TorchSDF.git
 cd TorchSDF
-git checkout 0.1.0
+# git checkout 0.1.0
 bash install.sh
 ```
 

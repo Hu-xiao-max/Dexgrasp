@@ -7,7 +7,7 @@ Description: generate grasps in large-scale, use multiple graphics cards, no log
 import os
 import sys
 
-sys.path.append(os.path.realpath('.'))
+sys.path.append(os.path.realpath('./grasp_generation'))
 
 import argparse
 import multiprocessing

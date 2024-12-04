@@ -54,19 +54,36 @@ DexGraspNet
 ## Quick Example
 
 ```bash
-conda create -n your_env python=3.7
-conda activate your_env
+conda create -n dexgrasp python=3.8
+conda activate dexgrasp
+
+# cuda version 
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+# pytorch3d install
+conda install -c iopath iopath
+conda install -c fvcore -c conda-forge fvcore
+# download pytorch3d
+https://anaconda.org/pytorch3d/pytorch3d/0.7.8/download/linux-64/pytorch3d-0.7.8-py38_cu121_pyt241.tar.bz2
+cd downloads
+# To install this package run one of the following:
+conda install pytorch3d::pytorch3d
+conda install pytorch3d/label/archived::pytorch3d
+
+
+# other install 
+conda install ipykernel
+conda install transforms3d
+pip install trimesh
+pip install pyyaml
+pip install lxml
+# install pytorch_kinematics
+cd thirdparty/pytorch_kinematics
+pip install -e .
+
 
 # for quick example, cpu version is OK.
 conda install pytorch cpuonly -c pytorch
-conda install ipykernel
-conda install transforms3d
-conda install trimesh
-pip install pyyaml
-pip install lxml
 
-cd thirdparty/pytorch_kinematics
-pip install -e .
 ```
 
 Then you can run `grasp_generation/quick_example.ipynb`.
