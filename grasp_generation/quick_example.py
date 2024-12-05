@@ -5,6 +5,8 @@ import numpy as np
 import transforms3d
 import torch
 import trimesh
+import sys
+sys.path.append('/home/hux/code/Dexgrasp/grasp_generation')
 
 mesh_path = "../data/meshdata"
 data_path = "../data/dataset"
@@ -12,7 +14,7 @@ data_path = "../data/dataset"
 
 use_visual_mesh = False
 
-hand_file = "mjcf/shadow_hand_vis.xml" if use_visual_mesh else "mjcf/shadow_hand_wrist_free.xml"
+hand_file = "/home/hux/code/Dexgrasp/grasp_generation/mjcf/shadow_hand_vis.xml" if use_visual_mesh else "/home/hux/code/Dexgrasp/grasp_generation/mjcf/shadow_hand_wrist_free.xml"
 
 joint_names = [
     'robot0:FFJ3', 'robot0:FFJ2', 'robot0:FFJ1', 'robot0:FFJ0',
@@ -27,7 +29,7 @@ rot_names = ['WRJRx', 'WRJRy', 'WRJRz']
 
 hand_model = HandModelMJCFLite(
     hand_file,
-    "mjcf/meshes")
+    "/home/hux/code/Dexgrasp/grasp_generation/mjcf/meshes")
 
 grasp_code_list = []
 for code in os.listdir(data_path):

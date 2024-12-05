@@ -85,6 +85,17 @@ pip install -e .
 conda install pytorch cpuonly -c pytorch
 
 ```
+# TorchSDF Install
+
+```bash
+cd DexGraspNet/thirdparty
+git clone https://github.com/wrc042/TorchSDF.git
+cd TorchSDF
+bash install.sh
+```
+```bash
+conda env create -f py36.yaml
+```
 
 Then you can run `grasp_generation/quick_example.ipynb`.
 
@@ -113,7 +124,5 @@ This work and the dataset are licensed under [CC BY-NC 4.0][cc-by-nc].
 [cc-by-nc-image]: https://licensebuttons.net/l/by-nc/4.0/88x31.png
 
 ## Contact
-
-If you have any questions, please open a github issue or contact us:
 
 Ruicheng Wang: <wrc0326@stu.pku.edu.cn>, Jialiang Zhang: <jackzhang0906@126.com>, He Wang: <hewang@pku.edu.cn>

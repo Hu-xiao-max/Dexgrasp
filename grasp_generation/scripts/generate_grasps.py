@@ -17,6 +17,8 @@ from tqdm import tqdm
 import math
 import random
 import transforms3d
+import sys
+sys.path.append('/home/hux/code/Dexgrasp/grasp_generation/')
 
 from utils.hand_model import HandModel
 from utils.object_model import ObjectModel

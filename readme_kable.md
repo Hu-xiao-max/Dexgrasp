@@ -15,3 +15,10 @@ shadow hand:
     python ./quick_example.py
 kable hand: 
     python ./quick_example_kable.py
+# TorchSDF 安装
+```bash
+cd DexGraspNet/thirdparty
+git clone https://github.com/wrc042/TorchSDF.git
+cd TorchSDF
+bash install.sh
+```
