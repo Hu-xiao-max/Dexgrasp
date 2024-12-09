@@ -55,10 +55,10 @@ def generate(args_list):
 
     # 111 modify
     hand_model = HandModel(
-        mjcf_path='mjcf/shadow_hand_wrist_free.xml',
-        mesh_path='mjcf/meshes',
-        contact_points_path='mjcf/contact_points.json',
-        penetration_points_path='mjcf/penetration_points.json',
+        mjcf_path='/home/hux/code/Dexgrasp/grasp_generation/mjcf/shadow_hand_wrist_free.xml',
+        mesh_path='/home/hux/code/Dexgrasp/grasp_generation/mjcf/meshes',
+        contact_points_path='/home/hux/code/Dexgrasp/grasp_generation/mjcf/contact_points.json',
+        penetration_points_path='/home/hux/code/Dexgrasp/grasp_generation/mjcf/penetration_points.json',
         device=device
     )
 
@@ -163,8 +163,8 @@ def generate(args_list):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # experiment settings
-    parser.add_argument('--result_path', default="../data/graspdata2", type=str)
-    parser.add_argument('--data_root_path', default="../data/meshdata", type=str)
+    parser.add_argument('--result_path', default="/home/hux/code/Dexgrasp/data/graspdata2", type=str)
+    parser.add_argument('--data_root_path', default="/home/hux/code/Dexgrasp/data/meshdata", type=str)
     parser.add_argument('--object_code_list', nargs='*', type=str)
     parser.add_argument('--all', action='store_true')
     parser.add_argument('--overwrite', action='store_true')
@@ -203,7 +203,7 @@ if __name__ == '__main__':
 
 
     args.object_code_list = ['core-mug-8570d9a8d24cb0acbebd3c0c0c70fb03',
-                            #  'ddg-gd_banana_poisson_002',
+                              #'ddg-gd_banana_poisson_002',
                              ]
 
     os.environ["CUDA_VISIBLE_DEVICES"] = '0'
